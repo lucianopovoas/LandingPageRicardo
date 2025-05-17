@@ -1,6 +1,11 @@
     /* Fonte Poppins */
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+
+    :root {
+      font-size: clamp(12px, .834vw, 16px);
+    }
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -18,13 +23,13 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      gap: 30px;
+      gap: 2rem;
     }
 
     header a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 1rem;
     }
 
     h2 {
@@ -32,8 +37,8 @@
     }
 
     .botoes .btn {
-      padding: 14px 28px;
-      border-radius: 30px;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
       font-weight: 600;
       font-size: 1rem;
       text-decoration: none;
@@ -74,10 +79,10 @@
     .bloom-bg::after {
       content: "";
       position: absolute;
-      width: 400px;
-      height: 400px;
+      width: 25rem;
+      height: 25rem;
       background: radial-gradient(circle, rgba(162, 89, 255, 0.5) 0%, transparent 70%);
-      filter: blur(100px);
+      filter: blur(6rem);
       z-index: -1;
     }
 
@@ -95,10 +100,10 @@
     /* Círculos extras usando pseudo-elementos com animação opcional */
     .bloom-bg div {
       position: absolute;
-      width: 300px;
-      height: 300px;
+      width: 18.7rem;
+      height: 18.7rem;
       background: radial-gradient(circle, rgba(162, 89, 255, 0.3) 0%, transparent 70%);
-      filter: blur(80px);
+      filter: blur(5rem);
       border-radius: 50%;
       z-index: -1;
     }
@@ -126,38 +131,38 @@
 
     .whatsapp-button {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 1.25rem;
+      right: 1.25rem;
       background-color: #25d366;
       color: white;
-      padding: 10px 20px;
-      border-radius: 30px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      padding: 0.6rem 1.25rem;
+      border-radius: 2rem;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
       text-decoration: none;
       font-family: 'Poppins', sans-serif;
       display: flex;
       align-items: center;
       /* Centraliza verticalmente */
-      gap: 10px;
+      gap: 0.6rem;
       z-index: 999;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .whatsapp-button:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(37, 211, 102, 0.6);
+      box-shadow: 0 0 1.5rem rgba(37, 211, 102, 0.6);
     }
 
     .whatsapp-button img {
-      width: 24px;
-      height: 24px;
+      width: 1.5rem;
+      height: 1.5rem;
       filter: brightness(0) invert(1);
       /* Ícone branco */
       display: block;
     }
 
     .whatsapp-button span {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 500;
       display: block;
     }
@@ -165,32 +170,32 @@
     /* Seção principal */
     .hero {
       display: flex;
-      justify-content: space-around;
+      align-items: center;
+      justify-content: center;
       padding: 10rem 1rem 3rem 1rem;
       background: #0000005b;
-      border-radius: 20px;
+      border-radius: 1.5rem;
       height: 48rem;
-      align-items: center;
     }
 
     .hero-content {
-      max-width: 1200px;
+      max-width: 75rem;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 40px;
+      gap: 2.5rem;
     }
 
     /* Texto */
     .textos {
       flex: 1;
-      min-width: 280px;
+      min-width: 17.5rem;
     }
 
     .textos h1 {
       font-size: 3rem;
-      margin-bottom: 10px;
+      margin-bottom: 0.6rem;
       font-weight: 700;
       color: white;
     }
@@ -206,7 +211,7 @@
     }
 
     .textos p {
-      margin-top: 20px;
+      margin-top: 1.25rem;
       font-size: 1.1rem;
       line-height: 1.6;
       color: #ccc;
@@ -215,42 +220,42 @@
 
     /* Botões */
     .botoes {
-      margin-top: 30px;
+      margin-top: 2rem;
       display: flex;
-      gap: 20px;
+      gap: 1.25rem;
     }
 
     /* Foto */
     .foto {
       display: flex;
-      justify-content: flex-end;
-      min-width: 180px;
+      justify-content: center;
+      min-width: 11.25rem;
     }
 
     @keyframes pulse {
       0% {
-        box-shadow: 0 0 30px #a259ff;
+        box-shadow: 0 0 2rem #a259ff;
         transform: scale(1);
       }
 
       50% {
-        box-shadow: 0 0 50px #a259ff;
+        box-shadow: 0 0 3.125rem #a259ff;
         transform: scale(1.03);
       }
 
       100% {
-        box-shadow: 0 0 30px #a259ff;
+        box-shadow: 0 0 2rem #a259ff;
         transform: scale(1);
       }
     }
 
     .foto-circular {
-      width: 18rem;
-      height: 18rem;
+      width: 25rem;
+      height: 25rem;
       border-radius: 50%;
       overflow: hidden;
       background: black;
-      box-shadow: 0 0 30px #a259ff;
+      box-shadow: 0 0 2rem #a259ff;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -270,20 +275,20 @@
 
 
     .sobre {
-      padding: 60px 20px;
+      padding: 4rem 1.25rem;
       background-color: #121212;
       /* fundo escuro */
       color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      border-radius: 20px;
+      border-radius: 1.25rem;
     }
 
     .sobre-container {
-      max-width: 1100px;
+      max-width: 68.75rem;
       margin: 0 auto;
       display: flex;
       align-items: center;
-      gap: 40px;
+      gap: 2.5rem;
       flex-wrap: wrap;
       /* para responsividade */
     }
@@ -293,12 +298,12 @@
       justify-content: center;
       /* centraliza horizontalmente o círculo */
       align-items: center;
-      width: 320px;
-      height: 320px;
+      width: 20rem;
+      height: 20rem;
       border-radius: 50%;
       /* deixa o container circular */
       overflow: hidden;
-      box-shadow: 0 8px 24px rgba(162, 89, 255, 0.6);
+      box-shadow: 0 0.5rem 1.5rem rgba(162, 89, 255, 0.6);
       margin: 0 auto;
       /* centraliza na página */
       transition: transform 0.3s ease;
@@ -329,7 +334,6 @@
     .descricao {
       display: flex;
       flex-direction: column;
-      max-width: 40%;
     }
 
     .descricao h3 em span {
@@ -339,7 +343,7 @@
     .sobre-texto h2 {
       font-size: 2.8rem;
       color: #ffffff;
-      margin-bottom: 12px;
+      margin-bottom: 0.75rem;
       font-weight: 700;
     }
 
@@ -360,13 +364,13 @@
       color: #ffffff;
       font-style: normal;
       font-weight: 600;
-      margin-bottom: 16px;
+      margin-bottom: 1rem;
       display: block;
     }
 
     .sobre-texto h3 {
-      margin-top: 30px;
-      margin-bottom: 14px;
+      margin-top: 2rem;
+      margin-bottom: 0.9rem;
       color: #ffffff;
       font-size: 1.6rem;
     }
@@ -375,7 +379,7 @@
       list-style: none;
       padding: 0;
       gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(11.25rem, 1fr));
       color: #ddd;
     }
 
@@ -386,9 +390,9 @@
 
     .sobre-texto ul li {
       background: #222;
-      padding: 10px 14px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #a259ff55;
+      padding: 0.6rem 0.9rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 0.6rem #a259ff55;
       font-weight: 600;
       transition: background-color 0.3s ease;
     }
@@ -396,8 +400,8 @@
     .especialidades {
       display: flex;
       justify-content: center;
-      margin-top: 30px;
-      margin-bottom: 14px;
+      margin-top: 2rem;
+      margin-bottom: 0.9rem;
       color: #ffffff;
       font-size: 1.6rem;
     }
@@ -424,20 +428,20 @@
     .projetos {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 1.25rem;
       justify-content: center;
       max-width: 60%;
     }
 
     .projetos>div {
-      flex: 0 0 calc(33.333% - 20px);
+      flex: 0 0 calc(33.333% - 1.25rem);
       /* 3 por linha com gap */
       box-sizing: border-box;
     }
 
     .depoimentos {
       text-align: center;
-      padding: 40px 20px;
+      padding: 2.5rem 1.25rem;
     }
 
     .icones-depoimentos {
@@ -446,9 +450,9 @@
     }
 
     .box-icones-depoimentos {
-      border-radius: 10px;
+      border-radius: 0.6rem;
       border: 0.1px solid #a159ff66;
-      padding: 20px 60px;
+      padding: 1.25rem 4rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -460,19 +464,19 @@
 
     .swiper {
       width: 100%;
-      max-width: 2000px;
+      max-width: 125rem;
       margin: auto;
     }
 
     .swiper-slide img {
       width: 100%;
-      height: 200px;
+      height: 12.5rem;
       /* Aumente a altura aqui */
       object-fit: cover;
       /* Corta imagem se necessário, mantendo a proporção */
       object-fit: contain;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      border-radius: 0.7rem;
+      box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.4);
       transition: transform 0.3s ease;
     }
 
@@ -496,30 +500,30 @@
       margin-bottom: 0.5rem;
       font-weight: 700;
     }
-    .contato-cabecalho h2 span{
+
+    .contato-cabecalho h2 span {
       color: #a259ff;
     }
 
-    .contato-cabecalho p{
+    .contato-cabecalho p {
       color: #ccc;
       margin-top: 1.5rem;
       margin-bottom: 2rem;
     }
 
-    .contato-box{
+    .contato-box {
       padding: 2rem 0 2rem 0;
-      border-radius: 5px;
+      border-radius: 0.3rem;
       border: 0.1px solid #a159ff66;
     }
 
     .contato-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      max-width: 900px;
+      display: flex;
+      gap: 2rem;
       margin: 0 auto;
       align-items: center;
-      padding: 2rem 0 2rem 0;
+      padding: 2rem 2rem 2rem 2rem;
+      justify-content: center;
     }
 
     .contato-item {
@@ -527,14 +531,14 @@
       align-items: center;
       justify-content: center;
       font-size: 1.2rem;
-      gap: 12px;
+      gap: 0.7rem;
       color: #ccc;
       transition: color 0.3s ease;
       flex-direction: column;
       margin-bottom: 2rem;
     }
 
-    .contato-item h4{
+    .contato-item h4 {
       color: #ffffff;
     }
 
@@ -545,13 +549,13 @@
     .contato-item .icon {
       color: #a259ff;
       font-size: 1.6rem;
-      min-width: 24px;
+      min-width: 2rem;
     }
 
     .redes-sociais {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 1.25rem;
       margin-top: 2rem;
       width: 100%;
     }
@@ -559,14 +563,14 @@
     .btn-social {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 10px 24px;
-      border-radius: 30px;
+      gap: 0.5rem;
+      padding: 0.6rem 2rem;
+      border-radius: 2rem;
       font-weight: 700;
       color: #fff;
       text-decoration: none;
       font-size: 1.1rem;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.2);
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -576,34 +580,33 @@
 
     .btn-social.whatsapp {
       background-color: #25D366;
-      box-shadow: 0 0 10px #25D366;
+      box-shadow: 0 0 0.6rem #25D366;
     }
 
     .btn-social.whatsapp:hover {
       background-color: #1ebe5d;
-      box-shadow: 0 0 20px #1ebe5d;
+      box-shadow: 0 0 1.25rem #1ebe5d;
     }
 
     .btn-social.instagram {
       background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-      box-shadow: 0 0 10px #bc1888;
+      box-shadow: 0 0 0.6rem #bc1888;
     }
 
     .btn-social.instagram:hover {
       filter: brightness(1.2);
-      box-shadow: 0 0 20px #bc1888;
+      box-shadow: 0 0 1.25rem #bc1888;
     }
 
     .habilidades {
       display: flex;
       flex-direction: column;
-      max-width: 50%;
     }
 
     .cards {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 1.25rem;
     }
 
     .card-text-img {
@@ -619,10 +622,10 @@
     }
 
     img.img-card {
-      width: 100px;
+      width: 6.25rem;
       height: fit-content;
       margin-bottom: 2rem;
-      margin-top: 18px;
+      margin-top: 1.1rem;
     }
 
     .align-card-itens {
@@ -656,10 +659,10 @@
 
     .carousel {
       width: 90%;
-      max-width: 600px;
+      max-width: 37.5rem;
       background: white;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 1rem;
+      box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1);
       overflow: hidden;
       position: relative;
       place-self: center;
@@ -672,21 +675,26 @@
 
     .slide {
       min-width: 100%;
-      padding: 30px;
+      padding: 2rem;
     }
 
     .slide-header {
       display: flex;
       align-items: center;
-      gap: 15px;
-      margin-bottom: 10px;
+      gap: 1rem;
+      margin-bottom: 0.6rem;
     }
 
     .slide img {
-      width: 70px;
-      height: 70px;
+      width: 4.3rem;
+      height: 4.3rem;
       border-radius: 50%;
       object-fit: cover;
+    }
+
+    .cards-gap {
+      gap: 1.25rem;
+      justify-content: center;
     }
 
     .slide-info {
@@ -702,11 +710,11 @@
 
     .stars {
       color: #f1c40f;
-      margin-top: 5px;
+      margin-top: 0.3rem;
     }
 
     .slide p {
-      margin-top: 15px;
+      margin-top: 1rem;
       font-size: 0.95em;
       color: #555;
       line-height: 1.4em;
@@ -729,7 +737,7 @@
       background: #a259ff;
       border: none;
       cursor: pointer;
-      padding: 10px;
+      padding: 0.6rem;
       border-radius: 50%;
       transition: background 0.3s;
     }
@@ -749,7 +757,7 @@
     }
 
     .controls img.arrow {
-      width: 30px;
+      width: 2rem;
       height: auto;
       filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
       transition: transform 0.2s;
@@ -767,10 +775,99 @@
 
       .sobre-foto img {
         max-width: 250px;
-        margin: 0 auto 30px;
+        margin: 0 auto 2rem;
+      }
+
+      .sobre-texto {
+        flex-direction: column;
       }
 
       .sobre-texto ul {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(8.75rem, 1fr));
       }
+
+      .descricao {
+        padding: 0 2rem;
+      }
+    }
+
+    @media (max-width: 431px) {
+      .hero {
+        flex-direction: column;
+        height: unset;
+      }
+
+      .hero-content {
+        padding: 0 2rem;
+      }
+
+      .foto {
+        margin: 4rem 0;
+      }
+
+      .foto-circular {
+        width: 20rem;
+        height: 20rem;
+      }
+
+      .icones-depoimentos-centralizar{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .box-icones-depoimentos{
+        text-align: center;
+      }
+        
+      .controls{
+        top: 75%;
+      }
+
+      .btn-left{
+        right: 15rem;
+      }
+
+      .btn-right{
+        left: 14.3rem;
+      }
+
+      .contato{
+        padding: 2rem;
+      }
+
+      .contato-grid{
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 391px) {
+      .btn-right{
+        left: 13.3rem;
+      }
+
+      .btn-left{
+        right: 13.3rem;
+      }
+      .foto{
+        margin: 4rem 0 0 0;
+      }
+
+    }
+
+    @media (max-width: 321px) {
+
+      header{
+        flex-direction: column;
+        gap: unset;
+      }
+
+      .btn-right{
+        left: 9.5rem;
+      }
+
+      .btn-left{
+        right: 10.4rem;
+      }
+
     }
