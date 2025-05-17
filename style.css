@@ -1,24 +1,22 @@
+    /* Fonte Poppins */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-<<<<<<< HEAD
-      background-color: #000;
-=======
-      background-color: #000!important;
->>>>>>> 7653ba8 (Making some changes and implementing Bootstrap)
+      background-color: #000 !important;
       color: #fff;
     }
 
     header {
       background-color: #000000;
-      padding: 20px;
+      padding: 0.3rem;
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 999;
       display: flex;
-      justify-content: center;
-      border-bottom: 2px solid #800080;
+      justify-content: space-around;
       align-items: center;
       gap: 30px;
     }
@@ -164,27 +162,19 @@
       display: block;
     }
 
-
-    /* Fonte Poppins */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #000;
-      color: #fff;
-    }
-
     /* Seção principal */
     .hero {
+      display: flex;
+      justify-content: space-around;
       padding: 10rem 1rem 3rem 1rem;
       background: #0000005b;
       border-radius: 20px;
+      height: 48rem;
+      align-items: center;
     }
 
     .hero-content {
       max-width: 1200px;
-      margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -219,8 +209,9 @@
       margin-top: 20px;
       font-size: 1.1rem;
       line-height: 1.6;
-      color: #aaa;
+      color: #ccc;
     }
+
 
     /* Botões */
     .botoes {
@@ -231,10 +222,9 @@
 
     /* Foto */
     .foto {
-      flex: 1;
       display: flex;
-      justify-content: center;
-      min-width: 280px;
+      justify-content: flex-end;
+      min-width: 180px;
     }
 
     @keyframes pulse {
@@ -255,8 +245,8 @@
     }
 
     .foto-circular {
-      width: 280px;
-      height: 280px;
+      width: 18rem;
+      height: 18rem;
       border-radius: 50%;
       overflow: hidden;
       background: black;
@@ -324,6 +314,25 @@
       /* garante que a imagem também fique circular */
     }
 
+    .sobre-texto {
+      background-color: #000;
+      width: 100%;
+      padding: 1rem 0 1rem 0;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+    }
+
+    .descricao {
+      display: flex;
+      flex-direction: column;
+      max-width: 40%;
+    }
+
+    .descricao h3 em span {
+      color: #a259ff;
+    }
+
     .sobre-texto h2 {
       font-size: 2.8rem;
       color: #ffffff;
@@ -334,7 +343,7 @@
     .sobre-texto p {
       font-size: 1.15rem;
       line-height: 1.6;
-      margin-bottom: 18px;
+      margin-top: 2rem;
       color: #ccc;
     }
 
@@ -355,23 +364,23 @@
     .sobre-texto h3 {
       margin-top: 30px;
       margin-bottom: 14px;
-      color: #a259ff;
+      color: #ffffff;
       font-size: 1.6rem;
     }
 
     .sobre-texto ul {
       list-style: none;
       padding: 0;
-      gap: 2rem;   
+      gap: 2rem;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       color: #ddd;
     }
-    
+
     .sobre-texto ul li:hover {
       background-color: #a259ff;
       color: #fff;
     }
-    
+
     .sobre-texto ul li {
       background: #222;
       padding: 10px 14px;
@@ -381,38 +390,59 @@
       transition: background-color 0.3s ease;
     }
 
-    .especialidades h3 {
+    .especialidades {
+      display: flex;
+      justify-content: center;
       margin-top: 30px;
       margin-bottom: 14px;
-      color: #a259ff;
+      color: #ffffff;
       font-size: 1.6rem;
     }
-    
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    
-    
-    
+
+
     .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #090909;
+      padding: 4rem 0 4rem 0;
+    }
+
+    .projects h2 span {
+      color: #a259ff;
     }
     
+    .projects p{
+      color: #ccc;
+      text-align: center;
+      margin: 1rem 0rem 2rem 0rem;
+    }
+
+    .projetos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      max-width: 60%;
+    }
+
+    .projetos>div {
+      flex: 0 0 calc(33.333% - 20px);
+      /* 3 por linha com gap */
+      box-sizing: border-box;
+    }
+
     .depoimentos {
       text-align: center;
       padding: 40px 20px;
     }
-    
+
     .swiper {
       width: 100%;
       max-width: 2000px;
       margin: auto;
     }
-    
+
     .swiper-slide img {
       width: 100%;
       height: 200px;
@@ -424,26 +454,28 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
       transition: transform 0.3s ease;
     }
-    
+
     .swiper-slide:hover img {
       transform: scale(1.05);
     }
-    
+
     .contato {
       display: flex;
       flex-direction: column;
       align-items: center;
       /* centraliza horizontalmente todos os filhos */
       text-align: center;
+      background-color: #000;
+      padding: 4rem 0 4rem 0;
     }
-    
+
     .contato h2 {
       color: #a259ff;
       font-size: 2.5rem;
       margin-bottom: 40px;
       font-weight: 700;
     }
-    
+
     .contato-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -452,7 +484,7 @@
       margin: 0 auto;
       align-items: center;
     }
-    
+
     .contato-item {
       display: flex;
       align-items: center;
@@ -462,17 +494,17 @@
       color: #ccc;
       transition: color 0.3s ease;
     }
-    
+
     .contato-item:hover {
       color: #a259ff;
     }
-    
+
     .contato-item .icon {
       color: #a259ff;
       font-size: 1.6rem;
       min-width: 24px;
     }
-    
+
     .redes-sociais {
       display: flex;
       justify-content: center;
@@ -482,7 +514,7 @@
       width: 100%;
       /* ocupa toda a largura do pai */
     }
-    
+
     .btn-social {
       display: inline-flex;
       align-items: center;
@@ -496,29 +528,35 @@
       box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
-    
+
     .btn-social i {
       font-size: 1.5rem;
     }
-    
+
     .btn-social.whatsapp {
       background-color: #25D366;
       box-shadow: 0 0 10px #25D366;
     }
-    
+
     .btn-social.whatsapp:hover {
       background-color: #1ebe5d;
       box-shadow: 0 0 20px #1ebe5d;
     }
-    
+
     .btn-social.instagram {
       background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
       box-shadow: 0 0 10px #bc1888;
     }
-    
+
     .btn-social.instagram:hover {
       filter: brightness(1.2);
       box-shadow: 0 0 20px #bc1888;
+    }
+
+    .habilidades {
+      display: flex;
+      flex-direction: column;
+      max-width: 50%;
     }
 
     .cards {
@@ -558,8 +596,11 @@
       font-size: 1rem;
       color: #ccc;
     }
+
     #depoimentos {
       position: relative;
+      background-color: #040404;
+      padding: 4rem 0 4rem 0;
     }
 
     .btn-left {
@@ -571,12 +612,13 @@
       position: relative;
       left: 16.5rem;
     }
+
     .carousel {
       width: 90%;
       max-width: 600px;
       background: white;
       border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       position: relative;
       place-self: center;
@@ -656,20 +698,24 @@
     }
 
     .titulo-depoimentos {
-        margin-bottom: 2rem;
-        text-align: center;
+      margin-bottom: 2rem;
+      text-align: center;
     }
-    
+    .titulo-depoimentos span{
+      color: #a259ff;
+    }
+
     .controls img.arrow {
       width: 30px;
       height: auto;
-      filter: drop-shadow(0 0 2px rgba(0,0,0,0.3));
+      filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
       transition: transform 0.2s;
     }
-    
+
     .controls img.arrow:hover {
       transform: scale(1.07);
     }
+
     @media (max-width: 768px) {
       .sobre-container {
         flex-direction: column;
