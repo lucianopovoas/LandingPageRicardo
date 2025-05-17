@@ -789,6 +789,10 @@
       .descricao {
         padding: 0 2rem;
       }
+
+      .icones-depoimentos-centralizar{
+        justify-content: center;
+      }
     }
 
     @media (max-width: 431px) {
@@ -869,5 +873,8 @@
       .btn-left{
         right: 10.4rem;
       }
-
+      
+      .contato-grid{
+        flex-direction: column;
+      }
     }
