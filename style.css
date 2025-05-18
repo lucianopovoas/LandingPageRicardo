@@ -767,6 +767,35 @@
       transform: scale(1.07);
     }
 
+    .framer-1EDzb .framer-19t2la1 {
+      background: linear-gradient(180deg, #0000, #000);
+      bottom: 0;
+      flex: none;
+      height: 120px;
+      left: 0;
+      overflow: hidden;
+      pointer-events: none;
+      position: fixed;
+      right: 0;
+      z-index: 3;
+    }
+
+    .framer-1aou9dh-container {
+      bottom: 0;
+      flex: none;
+      height: 50px;
+      left: 0;
+      position: fixed;
+      right: 0;
+      z-index: 5;
+    }
+
+
+
+
+
+
+
     @media (max-width: 768px) {
       .sobre-container {
         flex-direction: column;
@@ -790,7 +819,7 @@
         padding: 0 2rem;
       }
 
-      .icones-depoimentos-centralizar{
+      .icones-depoimentos-centralizar {
         justify-content: center;
       }
     }
@@ -814,46 +843,43 @@
         height: 20rem;
       }
 
-      .icones-depoimentos-centralizar{
+      .icones-depoimentos-centralizar {
         display: flex;
         justify-content: center;
         gap: 2rem;
       }
 
-      .box-icones-depoimentos{
+      .box-icones-depoimentos {
         text-align: center;
       }
-        
-      .controls{
+
+      .controls {
         top: 75%;
       }
 
-      .btn-left{
-        right: 15rem;
+      .btn-left {
+        right: 3rem;
       }
 
-      .btn-right{
-        left: 14.3rem;
+      .btn-right {
+        left: 3rem;
       }
 
-      .contato{
+      .controls {
+        position: unset;
+      }
+
+      .contato {
         padding: 2rem;
       }
 
-      .contato-grid{
+      .contato-grid {
         justify-content: center;
       }
     }
 
     @media (max-width: 391px) {
-      .btn-right{
-        left: 13.3rem;
-      }
-
-      .btn-left{
-        right: 13.3rem;
-      }
-      .foto{
+      .foto {
         margin: 4rem 0 0 0;
       }
 
@@ -861,20 +887,12 @@
 
     @media (max-width: 321px) {
 
-      header{
+      header {
         flex-direction: column;
         gap: unset;
       }
 
-      .btn-right{
-        left: 9.5rem;
-      }
-
-      .btn-left{
-        right: 10.4rem;
-      }
-      
-      .contato-grid{
+      .contato-grid {
         flex-direction: column;
       }
     }
