@@ -37,5 +37,5 @@ const swiper = new Swiper('.swiper', {
           slidesPerView: 3, // desktops
         }
       }
-    });
+});
 

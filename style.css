@@ -2,6 +2,11 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 
+    /* Tags Gerais */
+    html {
+      overflow-x: hidden;
+    }
+
     :root {
       font-size: clamp(12px, .834vw, 16px);
     }
@@ -12,6 +17,51 @@
       background-color: #000 !important;
       color: #fff;
     }
+
+    h2 {
+      color: #ffffff;
+    }
+
+    .titulo-animado {
+      display: inline-block;
+      white-space: pre-wrap;
+    }
+
+    .titulo-animado span {
+      display: inline-block;
+      opacity: 0;
+      filter: blur(4px);
+      transform: translateY(20px);
+      animation: animarLetra 0.5s forwards;
+    }
+
+    @keyframes animarLetra {
+      to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+      }
+    }
+
+
+
+    @keyframes typing {
+      from {
+        width: 0
+      }
+
+      to {
+        width: 100%
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent
+      }
+    }
+
+    /* Header */
 
     header {
       background-color: #000000;
@@ -32,9 +82,163 @@
       margin: 0 1rem;
     }
 
-    h2 {
-      color: #ffffff;
+    /* section 1 */
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10rem 1rem 3rem 1rem;
+      background: #0000005b;
+      border-radius: 1.5rem;
+      height: 67rem;
     }
+
+    .hero-content {
+      max-width: 75rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
+    }
+
+    .typing-text {
+      overflow: hidden;
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      width: 0;
+      animation: typing 2s steps(25) forwards, blink 0.7s step-end infinite;
+    }
+
+    /* section 2 */
+
+    .sobre {
+      padding: 4rem 1.25rem;
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      border-radius: 1.25rem;
+    }
+
+    .sobre-container {
+      max-width: 68.75rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .sobre-foto {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0.5rem 1.5rem rgba(162, 89, 255, 0.6);
+      margin: 0 auto;
+      transition: transform 0.3s ease;
+    }
+
+    .sobre-foto:hover {
+      transform: scale(1.05);
+    }
+
+    .sobre-foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .sobre-texto {
+      background-color: #000;
+      width: 100%;
+      padding: 1rem 0 1rem 0;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+    }
+
+    .descricao {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .descricao h3 em span {
+      color: #a259ff;
+    }
+
+    .sobre-texto h2 {
+      font-size: 2.8rem;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    .sobre-texto p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      margin-top: 2rem;
+      color: #ccc;
+    }
+
+    .sobre-texto p strong {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #fff;
+    }
+
+    .sobre-texto p em {
+      color: #ffffff;
+      font-style: normal;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .sobre-texto h3 {
+      margin-top: 2rem;
+      margin-bottom: 0.9rem;
+      color: #ffffff;
+      font-size: 1.6rem;
+    }
+
+    .sobre-texto ul {
+      list-style: none;
+      padding: 0;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(11.25rem, 1fr));
+      color: #ddd;
+    }
+
+    .sobre-texto ul li:hover {
+      background-color: #a259ff;
+      color: #fff;
+    }
+
+    .sobre-texto ul li {
+      background: #222;
+      padding: 0.6rem 0.9rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 0.6rem #a259ff55;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    /* section 3 */
+
+    
+
+    /* section 4 */
+
+
+    /**************
+--RESPOONSIVE--
+**************/
 
     .botoes .btn {
       padding: 1rem 2rem;
@@ -168,24 +372,7 @@
     }
 
     /* Seção principal */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10rem 1rem 3rem 1rem;
-      background: #0000005b;
-      border-radius: 1.5rem;
-      height: 67rem;
-    }
 
-    .hero-content {
-      max-width: 75rem;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2.5rem;
-    }
 
     /* Texto */
     .textos {
@@ -274,128 +461,7 @@
 
 
 
-    .sobre {
-      padding: 4rem 1.25rem;
-      background-color: #121212;
-      /* fundo escuro */
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      border-radius: 1.25rem;
-    }
 
-    .sobre-container {
-      max-width: 68.75rem;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 2.5rem;
-      flex-wrap: wrap;
-      /* para responsividade */
-    }
-
-    .sobre-foto {
-      display: flex;
-      justify-content: center;
-      /* centraliza horizontalmente o círculo */
-      align-items: center;
-      width: 20rem;
-      height: 20rem;
-      border-radius: 50%;
-      /* deixa o container circular */
-      overflow: hidden;
-      box-shadow: 0 0.5rem 1.5rem rgba(162, 89, 255, 0.6);
-      margin: 0 auto;
-      /* centraliza na página */
-      transition: transform 0.3s ease;
-    }
-
-    .sobre-foto:hover {
-      transform: scale(1.05);
-    }
-
-    .sobre-foto img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      /* garante que a imagem preencha o círculo */
-      border-radius: 50%;
-      /* garante que a imagem também fique circular */
-    }
-
-    .sobre-texto {
-      background-color: #000;
-      width: 100%;
-      padding: 1rem 0 1rem 0;
-      display: flex;
-      align-items: baseline;
-      justify-content: center;
-    }
-
-    .descricao {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .descricao h3 em span {
-      color: #a259ff;
-    }
-
-    .sobre-texto h2 {
-      font-size: 2.8rem;
-      color: #ffffff;
-      margin-bottom: 0.75rem;
-      font-weight: 700;
-    }
-
-    .sobre-texto p {
-      font-size: 1.15rem;
-      line-height: 1.6;
-      margin-top: 2rem;
-      color: #ccc;
-    }
-
-    .sobre-texto p strong {
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: #fff;
-    }
-
-    .sobre-texto p em {
-      color: #ffffff;
-      font-style: normal;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    .sobre-texto h3 {
-      margin-top: 2rem;
-      margin-bottom: 0.9rem;
-      color: #ffffff;
-      font-size: 1.6rem;
-    }
-
-    .sobre-texto ul {
-      list-style: none;
-      padding: 0;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(11.25rem, 1fr));
-      color: #ddd;
-    }
-
-    .sobre-texto ul li:hover {
-      background-color: #a259ff;
-      color: #fff;
-    }
-
-    .sobre-texto ul li {
-      background: #222;
-      padding: 0.6rem 0.9rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 0 0.6rem #a259ff55;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
 
     .especialidades {
       display: flex;
@@ -618,14 +684,18 @@
 
     .card-text-img h4 {
       text-align: center;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
 
     img.img-card {
-      width: 6.25rem;
+      width: 5rem;
       height: fit-content;
-      margin-bottom: 2rem;
-      margin-top: 1.1rem;
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .card-text-img p {
+      margin: 0.5rem 0;
     }
 
     .align-card-itens {
@@ -637,7 +707,7 @@
 
     .card-text-img p {
       text-align: center;
-      font-size: 1rem;
+      font-size: 0.9rem;
       color: #ccc;
     }
 
@@ -693,7 +763,7 @@
     }
 
     .cards-gap {
-      gap: 1.25rem;
+      gap: 1rem;
       justify-content: center;
     }
 
@@ -790,13 +860,11 @@
       z-index: 5;
     }
 
-
-
-
-
-
-
     @media (max-width: 768px) {
+      .projetos>div {
+        flex: unset;
+      }
+
       .sobre-container {
         flex-direction: column;
         text-align: center;
