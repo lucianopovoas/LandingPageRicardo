@@ -35,6 +35,20 @@
       animation: animarLetra 0.5s forwards;
     }
 
+    .titulo-animado2 {
+      display: inline-block;
+      white-space: pre-wrap;
+      color: #ffffff;
+    }
+
+    .titulo-animado2 span {
+      display: inline-block;
+      opacity: 0;
+      filter: blur(4px);
+      transform: translateY(20px);
+      animation: animarLetra 0.5s forwards;
+    }
+
     @keyframes animarLetra {
       to {
         opacity: 1;
@@ -82,8 +96,6 @@
       margin: 0 1rem;
     }
 
-    /* section 1 */
-
     .hero {
       display: flex;
       align-items: center;
@@ -103,15 +115,6 @@
       gap: 2.5rem;
     }
 
-    .typing-text {
-      overflow: hidden;
-      border-right: 2px solid #fff;
-      white-space: nowrap;
-      width: 0;
-      animation: typing 2s steps(25) forwards, blink 0.7s step-end infinite;
-    }
-
-    /* section 2 */
 
     .sobre {
       padding: 4rem 1.25rem;
@@ -228,17 +231,6 @@
       font-weight: 600;
       transition: background-color 0.3s ease;
     }
-
-    /* section 3 */
-
-    
-
-    /* section 4 */
-
-
-    /**************
---RESPOONSIVE--
-**************/
 
     .botoes .btn {
       padding: 1rem 2rem;
@@ -385,10 +377,6 @@
       margin-bottom: 0.6rem;
       font-weight: 700;
       color: white;
-    }
-
-    .textos h1 span {
-      color: #a259ff;
     }
 
     .textos h3 {
@@ -893,6 +881,7 @@
     }
 
     @media (max-width: 431px) {
+
       .hero {
         flex-direction: column;
         height: unset;
@@ -900,6 +889,11 @@
 
       .hero-content {
         padding: 0 2rem;
+      }
+
+      .typing-text {
+        display: flex;
+        flex-direction: column;
       }
 
       .foto {
