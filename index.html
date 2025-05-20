@@ -35,9 +35,9 @@
         <div class="textos">
           <h1 class="titulo-animado2" data-aos="fade-up">Olá, eu sou <span>Ricardo Lafene</span></h1>
           <h3 data-aos="fade-right">Designer Gráfico</h3>
-          <p data-aos="fade-right">Crio Marcas Memoráveis que Conectam e Vendem
-            Com 8+ anos de experiência em identidade visual, rebranding e presença digital.
-            Transformo ideias em marcas autênticas e estratégias visuais que geram resultados.</p>
+          <p data-aos="fade-right">Com mais de 8 anos de experiência em identidade visual, rebranding e presença
+            digital, crio marcas que conectam e geram valor entre pessoas e organizações. Transformo ideias em marcas
+            autênticas e estratégias visuais que geram resultados, alinhando marca, negócio e comunicação.</p>
           <div class="botoes">
             <a href="#projects" class="btn btn-primary">Ver Projetos</a>
             <a href="#contato" class="btn btn-outline">Contato</a>
@@ -120,7 +120,7 @@
         </div>
         <div class="box-icones-depoimentos col-5 col-lg-3" data-aos="fade-right">
           <h2 class="contagem" data-alvo="282" data-aos="fade-down"></h2>
-          <p>Clientes Satisfeitos</p>
+          <p>Clientes Atendidos</p>
         </div>
         <div class="box-icones-depoimentos col-5 col-lg-3" data-aos="fade-right">
           <h2 data-aos="fade-down">8+</h2>
@@ -309,7 +309,6 @@
             </div>
           </div>
           <p>"Facil entendimento, entrega rapida e fazendo exatamente o que foi solicitado."</p>
-          <b>???</b>
         </div>
         <!-- Final do slide -->
         <!-- Comeco slide -->
@@ -633,40 +632,40 @@
     });
   </script>
   <script>
-  function animarContador(elemento, duracao = 2000) {
-    const alvo = parseInt(elemento.dataset.alvo, 10);
-    let inicio = 0;
-    const passo = Math.ceil(alvo / (duracao / 16.66)); // ~60fps
+    function animarContador(elemento, duracao = 2000) {
+      const alvo = parseInt(elemento.dataset.alvo, 10);
+      let inicio = 0;
+      const passo = Math.ceil(alvo / (duracao / 16.66)); // ~60fps
 
-    clearInterval(elemento._contadorInterval); // evita múltiplos intervalos simultâneos
+      clearInterval(elemento._contadorInterval); // evita múltiplos intervalos simultâneos
 
-    elemento._contadorInterval = setInterval(() => {
-      inicio += passo;
-      if (inicio >= alvo) {
-        elemento.textContent = alvo.toLocaleString();
-        clearInterval(elemento._contadorInterval);
-      } else {
-        elemento.textContent = inicio.toLocaleString();
-      }
-    }, 16.66);
-  }
+      elemento._contadorInterval = setInterval(() => {
+        inicio += passo;
+        if (inicio >= alvo) {
+          elemento.textContent = alvo.toLocaleString();
+          clearInterval(elemento._contadorInterval);
+        } else {
+          elemento.textContent = inicio.toLocaleString();
+        }
+      }, 16.66);
+    }
 
-  // Cria um observer para detectar quando o elemento entra na viewport
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        el.textContent = "0"; // reseta o texto para zero
-        animarContador(el);   // inicia a animação
-      }
+    // Cria um observer para detectar quando o elemento entra na viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          el.textContent = "0"; // reseta o texto para zero
+          animarContador(el);   // inicia a animação
+        }
+      });
+    }, { threshold: 0.6 }); // dispara quando 60% do elemento estiver visível
+
+    // Aplica o observer a todos os elementos com classe "contagem"
+    document.querySelectorAll(".contagem").forEach(el => {
+      observer.observe(el);
     });
-  }, { threshold: 0.6 }); // dispara quando 60% do elemento estiver visível
-
-  // Aplica o observer a todos os elementos com classe "contagem"
-  document.querySelectorAll(".contagem").forEach(el => {
-    observer.observe(el);
-  });
-</script>
+  </script>
 
 </body>
 
